@@ -34,8 +34,8 @@ pub mod pallet {
 
     #[pallet::config]
     pub trait Config: frame_system::Config {
-        /// Maximum number of stakings per staker for dapps.
-        const MAX_STAKINGS: u32;
+        // /// Maximum number of stakings per staker for dapps.
+        // const MAX_STAKINGS: u32; // seems redundant so it should be removed. Also check for other occurances and remove them TODO
 
         /// The staking balance.
         type Currency: LockableCurrency<Self::AccountId, Moment = Self::BlockNumber>;
@@ -264,7 +264,7 @@ pub mod pallet {
             Bonded::<T>::insert(&stash, &controller);
             Payee::<T>::insert(&stash, payee);
 
-            Self::deposit_event(Event::Bonded(stash.clone(), stash_balance.clone()));
+            Self::deposit_event(Event::<T>::Bonded(stash.clone(), stash_balance.clone()));
 
             let value = value.min(stash_balance);
             let ledger = StakingLedger {
