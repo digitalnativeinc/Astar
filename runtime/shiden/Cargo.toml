@@ -13,7 +13,7 @@ evm = { git = "https://github.com/PlasmNetwork/evm", branch = "polkadot-v0.9.11"
 smallvec = "1.6.1"
 
 # primitives
-fp-rpc = { git = "https://github.com/PlasmNetwork/frontier", branch = "polkadot-v0.9.11", default-features = false }
+fp-rpc = { git = "https://github.com/PlasmNetwork/frontier", branch = "shiden-patch", default-features = false }
 sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.11", default-features = false }
 sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.11", default-features = false }
 sp-consensus-aura = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.11", default-features = false }
